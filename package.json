@@ -1,7 +1,7 @@
 {
-  "name": "@vaibhavThangriyal/universal-db-connector",
+  "name": "@vaibhavthangriyal/universal-db-connector",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,10 @@
     "directory": "https://github.com/vaibhavthangriyal/universal-db-connector"
   },
   "keywords": [],
-  "author": "",
+  "author": "vaibhavthangriyal",
   "license": "ISC",
-  "description": ""
+  "description": "Universal Db Connector",
+  "dependencies": {
+    "typeorm": "^0.3.20"
+  }
 }
