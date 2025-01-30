@@ -3,7 +3,9 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 const defaultPgConfig: DataSourceOptions = {
     type       : 'postgres',
     synchronize: false,
-    ssl        : true,
+    ssl        :  {
+        rejectUnauthorized: false,
+    },
     logging    : true,
 };
 

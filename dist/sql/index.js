@@ -14,10 +14,12 @@ const typeorm_1 = require("typeorm");
 const defaultPgConfig = {
     type: 'postgres',
     synchronize: false,
-    ssl: true,
+    ssl: {
+        rejectUnauthorized: false,
+    },
     logging: true,
 };
-const createSqlConnection = ({ username, password, host, database, port, }) => __awaiter(void 0, void 0, void 0, function* () {
+const createSqlConnection = (_a) => __awaiter(void 0, [_a], void 0, function* ({ username, password, host, database, port, }) {
     try {
         const numericPort = typeof port === 'string' ? parseInt(port, 10) : port;
         if (isNaN(numericPort) || numericPort <= 0 || numericPort > 65535) {

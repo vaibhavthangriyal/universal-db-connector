@@ -17,7 +17,7 @@ const defaultMongoConfig = {
     useUnifiedTopology: true,
     logging: false,
 };
-const createMongoConnection = ({ username, password, host, database, port, }) => __awaiter(void 0, void 0, void 0, function* () {
+const createMongoConnection = (_a) => __awaiter(void 0, [_a], void 0, function* ({ username, password, host, database, port, }) {
     try {
         const numericPort = typeof port === 'string' ? parseInt(port, 10) : port;
         if (isNaN(numericPort) || numericPort <= 0 || numericPort > 65535) {
